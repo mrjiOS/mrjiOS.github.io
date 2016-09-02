@@ -22,10 +22,9 @@
 	
 		function dosomething1(){
                 window.location.href = &apos;app2://&apos;;
-                alert(&quot;ss&quot;)
 		}
 		function dosomething2(){
-			    windo">
+			    window.location.href = &apos;app2://la">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mrj Blog">
 <meta property="og:url" content="http://yoursite.com/2016/09/01/app/index.html">
@@ -46,11 +45,10 @@
 	
 		function dosomething1(){
                 window.location.href = &apos;app2://&apos;;
-                alert(&quot;ss&quot;)
 		}
 		function dosomething2(){
-			    windo">
-<meta property="og:updated_time" content="2016-09-02T09:00:42.000Z">
+			    window.location.href = &apos;app2://la">
+<meta property="og:updated_time" content="2016-09-02T09:30:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mrj Blog">
 <meta name="twitter:description" content="app唤起
@@ -69,10 +67,9 @@
 	
 		function dosomething1(){
                 window.location.href = &apos;app2://&apos;;
-                alert(&quot;ss&quot;)
 		}
 		function dosomething2(){
-			    windo">
+			    window.location.href = &apos;app2://la">
   
     <link rel="alternative" href="/atom.xml" title="Mrj Blog" type="application/atom+xml">
   
@@ -279,23 +276,30 @@
 
 
 	<div style="text-align: center;">
-			<button onclick="dosomething1()" ,="" style="width: 200px;height: 50px">打开app</button>
+			<button onclick="dosomething1()" ,="" style="width: 200px;height: 30px">打开app</button>
 	</div>
 
 	<div style="text-align: center;">
-			<button onclick="dosomething2()" ,="" style="width: 200px;height: 50px">打开app的某个页面</button>
+			<button onclick="dosomething2()" ,="" style="width: 200px;height: 30px">打开app的某个页面</button>
 	</div>
 	
 	<script type="text/javascript">
 		function dosomething1(){
                 window.location.href = 'app2://';
-                alert("ss")
 		}
 		function dosomething2(){
 			    window.location.href = 'app2://lanch';
-			    alert("hh")
 
 		}
+
+		setTimeout(function(){
+    // 未唤醒客户端
+    var hidden = document.hidden || document.webkitHidden;
+    if (!hidden && 
+        (new Date().getTime() - openTime < 600)) {
+        window.location.href = "itms-apps://itunes.apple.com/cn/app/yi-dian-ling-zhuan-jia-ban/id1138700433?mt=8";
+    }
+}, 500);
 	</script>
 </body>
 </html>
@@ -305,16 +309,6 @@
   </div>
   
     
-<nav id="article-nav">
-  
-  
-    <a href="/2016/08/10/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
   
 </article>
 
