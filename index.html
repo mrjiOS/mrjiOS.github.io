@@ -236,14 +236,10 @@
 
 		}
 
-		setTimeout(function(){
-    // 未唤醒客户端
-    var hidden = document.hidden || document.webkitHidden;
-    if (!hidden && 
-        (new Date().getTime() - openTime < 600)) {
-        window.location.href = "itms-apps://itunes.apple.com/cn/app/yi-dian-ling-zhuan-jia-ban/id1138700433?mt=8";
-    }
-}, 500);
+  timeout = setTimeout(function(){
+         window.location="itms-apps://itunes.apple.com/cn/app/yi-dian-ling-zhuan-jia-ban/id1138700433?mt=8";
+    },3000);
+
 	</script>
 </body>
 </html>
